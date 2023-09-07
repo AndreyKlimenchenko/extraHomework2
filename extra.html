@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>extraHomework2</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        
+      const question = prompt("Введите строку");
+
+      function palindrome(s) {
+        let d = s
+          .toString()
+          .toLowerCase()
+          .replace(/\s|[,.!?"/-]/g, "");
+        let arr = d.split("").reverse().join("");
+        if (d === arr) {
+          return "Это палиндром";
+        }
+        if (d !== arr) {
+          return "Это не палиндром";
+        }
+      }
+
+      const process = palindrome(question);
+
+      alert(process);
     </script>
-</body>
+  </body>
 </html>
