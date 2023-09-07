@@ -15,12 +15,12 @@
           .toLowerCase()
           .replace(/\s|[,.!?"/-]/g, "");
         let arr = d.split("").reverse().join("");
+        
         if (d === arr) {
           return "Это палиндром";
         }
-        if (d !== arr) {
-          return "Это не палиндром";
-        }
+
+        return "Это не палиндром";
       }
 
       const process = palindrome(question);
