@@ -11,11 +11,12 @@
 
       function palindrome(s) {
         let d = s
-          .toString()
           .toLowerCase()
-          .replace(/\s|[,.!?"/-]/g, "");
+          .replace(/\s|[,.!?"/-]/g, "")
+          .replaceAll("ё", "е")
+          .replaceAll("ъ", "ь");
         let arr = d.split("").reverse().join("");
-        
+
         if (d === arr) {
           return "Это палиндром";
         }
